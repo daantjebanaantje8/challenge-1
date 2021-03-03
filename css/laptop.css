@@ -1,0 +1,9 @@
+@media only screen and (min-width: 1024px){
+	.flex-item-left, .flex-item-right, .flex-item-center{
+		flex: 33%;
+	}
+
+	.spacex{
+    	width: 30%;
+	}
+}

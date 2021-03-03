@@ -1,0 +1,58 @@
+*{
+	box-sizing: border-box;
+	background-color: #1c1c1c;
+	font-family: din-condensed, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+h1, h2, h3{
+	text-transform: uppercase;
+}
+
+.flex-header{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	/*flex: 100%;*/
+}
+
+.smallx{
+	height: auto;
+    width: 30%;
+
+}
+
+.spacex{
+	display: none;
+}
+
+figure{
+	width: 100%;
+}
+
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 30px;
+	text-align: center;
+	flex-direction: column;
+}
+
+.flex-item-left, .flex-item-center, .flex-item-right{
+	padding: 10px;
+	flex: 100%;
+}
+
+.flex-item-left{
+	background-color: grey;
+}
+
+.flex-item-center{
+	background-color: white;
+}
+
+.flex-item-right{
+	background-color: turquoise;
+}
