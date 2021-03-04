@@ -2,8 +2,6 @@
 	box-sizing: border-box;
 	background-color: #1c1c1c;
 	font-family: din-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
     color: white;
 }
 
@@ -15,44 +13,48 @@ h1, h2, h3{
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
-	/*flex: 100%;*/
 }
 
 .smallx{
-	height: auto;
+	max-height: 200px;
     width: 30%;
-
 }
 
+/*dit is de class van de bredere spacex logo; die komt pas tevoorschijn bij tablet-grootte*/
 .spacex{
 	display: none;
 }
 
-figure{
+.flex-welcome{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+/*h1 en h3 apart zodat ik padding kon toevoegen tussen welcome back en de charts*/
+h1{
 	width: 100%;
 }
 
+h3{
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+/*flex-direction column zodat de charts onder elkaar terecht komen; een kolom*/
 .flex-container{
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 	flex-direction: column;
 }
 
 .flex-item-left, .flex-item-center, .flex-item-right{
-	padding: 10px;
-	flex: 100%;
-}
-
-.flex-item-left{
-	background-color: grey;
-}
-
-.flex-item-center{
-	background-color: white;
-}
-
-.flex-item-right{
-	background-color: turquoise;
+	padding: 20px 30px 20px 30px;
+	/*dit stukje flex code zorgt ervoor dat de reisizing werkt; anders kon ik wel upsizen maar niet terug (charts bleven breed buiten window*/
+	flex: 0 0 auto;
+	position: relative;
+	height: auto;
+	width: 100%;
 }

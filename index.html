@@ -1,5 +1,4 @@
-<DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -10,9 +9,16 @@
 		<link rel="stylesheet" type="text/css" href="css/tablet.css">
 		<link rel="stylesheet" type="text/css" href="css/laptop.css">
 
-		<link rel="stylesheet" href="https://use.typekit.net/awq8dww.css" >
+		<script type="text/javascript" src="scripts/charts.js" defer></script>
+
+		<!-- link voor chartjs -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+		<!-- link voor font (vergelijkbaar met spacex font) -->
+		<link rel="stylesheet" href="https://use.typekit.net/awq8dww.css">
 	</head>
 	<body>
+		<!-- eerste flexbox container; dit betreft om de logo -->
 		<div class="flex-header">
 			<figure>
 				<img class="smallx" src="img/smallxlogo.png" alt="small spacex logo">
@@ -23,12 +29,27 @@
 			</figure>	
 		</div>
 
-		<h1>test</h1>
-		<p>test 2</p>
+		<!-- tweede flexbox container; dit betreft de welkom tekst 
+			ik heb dit als aparte flexbox container neergezet omdat het anders tegenstreed met de properties van de header flexbox container :) -->
+		<div class="flex-welcome">
+			<h1>Interplanetary Transport System: Dashboard</h1>
+			<h3>Welcome back traveler!</h3>
+		</div>
+
+		<!-- derde en laatste flexbox container; dit betreft alle charts -->
 		<div class="flex-container">	
-			<div class="flex-item-left">1</div>
-			<div class="flex-item-center">2</div>
-			<div class="flex-item-right">3</div>
+			<!-- aparte flexbox voor linker item/chart-->
+			<div class="flex-item-left">
+				<canvas id="horizontalBar"></canvas>
+			</div>
+			<!-- aparte flexbox voor middel item/chart-->
+			<div class="flex-item-center">
+				<canvas id="lineChart"></canvas>
+			</div>
+			<!-- aparte flexbox voor rechter item/chart-->
+			<div class="flex-item-right">
+				<canvas id="barChart"></canvas>
+			</div>
 		</div>
 	</body>
 </html>
